@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LeafScan</string>
+    <string name="model_label">Modelo</string>
+    <string name="btn_camera">Câmera</string>
+    <string name="btn_gallery">Galeria</string>
+    <string name="btn_benchmark">Medir latência (50 execuções)</string>
+    <string name="placeholder">Tire ou escolha uma foto de uma folha para começar.</string>
+    <string name="results_title">Diagnóstico mais provável</string>
+    <string name="uncertain">Não tenho certeza. Tente outra foto: uma folha só, bem iluminada, ocupando quase toda a imagem.</string>
+    <string name="disclaimer">Funciona sem internet. Reconhece 38 classes de 14 culturas (PlantVillage). É uma ferramenta de apoio e não substitui a avaliação de um agrônomo.</string>
+    <string name="no_camera">Nenhum app de câmera encontrado.</string>
+    <string name="need_image">Escolha uma foto primeiro.</string>
+</resources>

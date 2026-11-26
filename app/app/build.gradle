@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.leafscan'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.leafscan'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // assinado com a chave de debug só para facilitar a instalação do APK de teste
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // Os modelos .tflite e o labels.txt ficam em leafscan/models/ (uma única cópia no repositório)
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', '../../models']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.exifinterface:exifinterface:1.3.7'
+    // LiteRT (antigo TensorFlow Lite), API clássica Interpreter
+    implementation 'com.google.ai.edge.litert:litert:1.4.0'
+}
